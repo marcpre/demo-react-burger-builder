@@ -1,3 +1,13 @@
 # demo-react-burger-builder
 
---> stopped at 119
+## Install
+
+`npm install`
+
+## Run
+
+`npm start`
+
+
+
+--> stopped at lection 9
