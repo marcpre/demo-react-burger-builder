@@ -9,5 +9,3 @@
 `npm start`
 
 
-
---> stopped at lection 9
