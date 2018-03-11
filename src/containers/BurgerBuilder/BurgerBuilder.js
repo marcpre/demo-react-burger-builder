@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux'
+import { connect } from 'react-redux';
 
 import Aux from '../../hoc/util';
 import Burger from '../../components/Burger/Burger';
@@ -8,7 +8,7 @@ import Modal from '../../components/UI/Modal/Modal';
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
-import * as actions from '../../store/actions/index'
+import * as actions from '../../store/actions/index';
 import axios from '../../axios-orders';
 
 class BurgerBuilder extends Component {
@@ -21,15 +21,8 @@ class BurgerBuilder extends Component {
     }
 
     componentDidMount () {
-        console.log(this.props);
-        this.props.onInitIngredients()
-    /* .then( response => {
-                this.setState( { ingredients: response.data } );
-            } )
-            .catch( error => {
-                this.setState( { error: true } );
-            } );
-    */        
+        console.log(this.props); 
+        this.props.onInitIngredients();
     }
 
     updatePurchaseState ( ingredients ) {
@@ -52,7 +45,7 @@ class BurgerBuilder extends Component {
     }
 
     purchaseContinueHandler = () => {
-        this.props.onInitPurchase()
+        this.props.onInitPurchase();
         this.props.history.push('/checkout');
     }
 
@@ -102,7 +95,7 @@ const mapStateToProps = state => {
         ings: state.burgerBuilder.ingredients,
         price: state.burgerBuilder.totalPrice,
         error: state.burgerBuilder.error
-    }
+    };
 }
 
 const mapDispatchToProps = dispatch => {
