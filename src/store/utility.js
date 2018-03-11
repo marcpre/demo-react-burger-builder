@@ -4,4 +4,3 @@ export const updatedObject = (oldObject, updatedProperties) => {
         ...updatedProperties
     }
 }
- 
